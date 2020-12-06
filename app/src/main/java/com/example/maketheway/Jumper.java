@@ -3,7 +3,7 @@ package com.example.maketheway;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
-public class Jumper extends Sprite {
+public class Jumper extends Objects {
 
 
     public Jumper(int x, int y, Bitmap bitmap) {

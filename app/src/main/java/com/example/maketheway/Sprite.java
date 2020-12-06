@@ -4,8 +4,8 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
 public class Sprite {
-    protected int x;
-    protected int y;
+    protected float x;
+    protected float y;
     protected Bitmap bitmap;
 
 
@@ -17,16 +17,11 @@ public class Sprite {
     }
     public void move (){
         x+=3;
-        x %= 1401;
+        x %= 1551;
     }
-    public void downEvent(float x,float y){
-        if (x>=this.x && x <=this.x+bitmap.getWidth()&&
-        (y>=this.y && y <=this.y+bitmap.getHeight())){
-            //state=moving;
-        }
-
-    }
-    public void draw (Canvas canvas){
+    public void draw (Canvas canvas)
+    {
         canvas.drawBitmap(bitmap,x,y,null);
     }
+
 }

@@ -3,7 +3,7 @@ package com.example.maketheway;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
-public class Box extends Sprite {
+public class Box extends Objects {
 
 
     public Box(int x, int y, Bitmap bitmap) {

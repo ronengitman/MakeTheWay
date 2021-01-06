@@ -3,7 +3,7 @@ package com.example.maketheway;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
-public class Platform extends Objects {
+public class Platform extends MovingObjects {
 
 
     public Platform(int x, int y, Bitmap bitmap) {

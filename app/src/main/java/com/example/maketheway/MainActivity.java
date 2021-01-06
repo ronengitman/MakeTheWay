@@ -2,6 +2,8 @@ package com.example.maketheway;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
@@ -14,5 +16,7 @@ public class MainActivity extends AppCompatActivity {
         FrameLayout myLayout = findViewById(R.id.framelayout_game);
         GameView myGame = new GameView(this);
         myLayout.addView(myGame);
+        SharedPreferences sp;
+        sp = getSharedPreferences("MyUserPrefs", Context.MODE_PRIVATE);
     }
 }

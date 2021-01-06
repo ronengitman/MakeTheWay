@@ -2,10 +2,11 @@ package com.example.maketheway;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 
 public class Sprite {
-    protected float x;
-    protected float y;
+    protected int x;
+    protected int y;
     protected Bitmap bitmap;
 
 
@@ -15,13 +16,18 @@ public class Sprite {
         this.y = y;
         this.bitmap = bitmap;
     }
-    public void move (){
-        x+=3;
-        x %= 1551;
+    public void setX(int x){
+        this.x = x;
     }
+    public void setY(int y){
+        this.y =y;
+    }
+
+
     public void draw (Canvas canvas)
     {
         canvas.drawBitmap(bitmap,x,y,null);
     }
+
 
 }

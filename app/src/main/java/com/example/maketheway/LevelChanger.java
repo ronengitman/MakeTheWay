@@ -3,10 +3,8 @@ package com.example.maketheway;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
-public class Jumper extends MovingObjects {
-
-
-    public Jumper(int x, int y, Bitmap bitmap) {
+public class LevelChanger extends NonMovingObjects {
+    public LevelChanger(int x, int y, Bitmap bitmap) {
         super(x, y, bitmap);
     }
 
@@ -16,8 +14,12 @@ public class Jumper extends MovingObjects {
 
     @Override
     public void processCollision(Player player) {
-        player.setJumping(true);
+        int newLevel = GameView.getLevel() + 1;
+        GameView.setLevel(newLevel);
+        player.changeDirection();
 
     }
+
+
 }
 
